@@ -46,14 +46,14 @@ class _DropperState extends State<Dropper> {
       (offset.dy - 100).toInt(),
     );
     // fullImage.clone();
-    print(curColor);
+    // print(curColor);
     chooseColor = Color.fromARGB(
       image.getAlpha(curColor),
       image.getRed(curColor),
       image.getGreen(curColor),
       image.getBlue(curColor),
     );
-    print(chooseColor.value);
+    // print(chooseColor.value);
     setState(() {});
   }
 
@@ -147,7 +147,7 @@ class _DropperState extends State<Dropper> {
                 Align(
                   alignment: Alignment.bottomCenter,
                   child: SizedBox(
-                    width: MediaQuery.of(context).size.height,
+                    width: MediaQuery.of(context).size.width,
                     height: 145,
                     child: Material(
                       elevation: 8.0,
