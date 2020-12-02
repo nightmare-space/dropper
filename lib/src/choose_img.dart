@@ -16,13 +16,6 @@ class _ChooseImgState extends State<ChooseImg> {
   @override
   void initState() {
     super.initState();
-    test();
-  }
-
-  test() {
-    ProcessResult result = Process.runSync('ls', ['/sdcard']);
-    print(result.stdout);
-    print(result.stderr);
   }
 
   @override
