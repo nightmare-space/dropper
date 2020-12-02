@@ -12,4 +12,3 @@
 ### macos
 
 <img src="screencap/macos.png" width="800" alt="macos" />
-<img src="screencap/01.png" width="800" alt="macos" />
