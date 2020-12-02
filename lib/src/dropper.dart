@@ -46,13 +46,14 @@ class _DropperState extends State<Dropper> {
       (offset.dy - 100).toInt(),
     );
     // fullImage.clone();
-    // print(color);
+    print(curColor);
     chooseColor = Color.fromARGB(
       image.getAlpha(curColor),
       image.getRed(curColor),
       image.getGreen(curColor),
       image.getBlue(curColor),
     );
+    print(chooseColor.value);
     setState(() {});
   }
 
@@ -202,7 +203,7 @@ class _DropperState extends State<Dropper> {
                                 child: Row(
                                   children: <Widget>[
                                     Text(
-                                      'HEX : ${curColor.toRadixString(16)}',
+                                      'HEX : 0x${chooseColor.value.toRadixString(16).padLeft(8, '0')}',
                                       style:
                                           const TextStyle(color: Colors.black),
                                     ),
