@@ -203,7 +203,7 @@ class _DropperState extends State<Dropper> {
                                 child: Row(
                                   children: <Widget>[
                                     Text(
-                                      'HEX : 0x${chooseColor.value.toRadixString(16).padLeft(8, '0')}',
+                                      'HEX : 0x${chooseColor.value.toRadixString(16).padLeft(8, '0')} ',
                                       style:
                                           const TextStyle(color: Colors.black),
                                     ),
