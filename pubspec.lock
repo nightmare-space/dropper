@@ -109,8 +109,8 @@ packages:
   file_manager:
     dependency: "direct main"
     description:
-      path: "/Users/nightmare/Desktop/nightmare-space/file_manager"
-      relative: false
+      path: "../file_manager"
+      relative: true
     source: path
     version: "0.0.1"
   flutter:
