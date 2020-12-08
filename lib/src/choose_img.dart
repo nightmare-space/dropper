@@ -33,6 +33,9 @@ class _ChooseImgState extends State<ChooseImg> {
                   userPath='/home/' + Platform.environment['USER'];
                 }else if(Platform.isMacOS){
                   userPath='/Users/' + Platform.environment['USER'];
+                }else if(Platform.isWindows){
+                  userPath=Platform.environment['USERPROFILE'];
+                  print(Platform.environment['USERPROFILE']);
                 }
                 print(userPath);
                 // return;
