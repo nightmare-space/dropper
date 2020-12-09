@@ -28,7 +28,9 @@ class _ChooseImgState extends State<ChooseImg> {
             width: MediaQuery.of(context).size.width,
             child: InkWell(
               onTap: () async {
-                imgPath = await FileManager.chooseFile(context: context);
+                imgPath = await FileManager.chooseFile(
+                  context: context,
+                );
                 print('取色器页面返回的文件路径为  $imgPath');
                 // imgPath = await showCustomDialog2<String>(
                 //   context: context,
