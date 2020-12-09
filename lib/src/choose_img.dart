@@ -28,7 +28,12 @@ class _ChooseImgState extends State<ChooseImg> {
             width: MediaQuery.of(context).size.width,
             child: InkWell(
               onTap: () async {
-                String userPath = '/Users/' + Platform.environment['USER'];
+                String userPath;
+                if(Platform.isLinux){
+                  userPath='/home/' + Platform.environment['USER'];
+                }else if(Platform.isMacOS){
+                  userPath='/Users/' + Platform.environment['USER'];
+                }
                 print(userPath);
                 // return;
                 imgPath = await FileManager.chooseFile(
