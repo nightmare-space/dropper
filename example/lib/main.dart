@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:dropper/dropper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -25,7 +27,9 @@ void main() {
     systemNavigationBarColor: Colors.transparent,
     systemNavigationBarDividerColor: Colors.transparent,
   ));
-  request();
+  if (Platform.isAndroid) {
+    request();
+  }
 }
 
 class MyApp extends StatelessWidget {
