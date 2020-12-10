@@ -61,7 +61,7 @@ class _ChooseImgState extends State<ChooseImg> {
                       print(userPath);
                       // return;
                       imgPath = await FileManager.chooseFile(
-                        context: context,
+                        context: builderContext,
                         pickPath: userPath,
                       );
                       print('取色器页面返回的文件路径为  $imgPath');
