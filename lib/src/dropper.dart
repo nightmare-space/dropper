@@ -34,11 +34,12 @@ class _DropperState extends State<Dropper> {
     final ByteData byteData =
         await img.toByteData(format: ImageByteFormat.png) as ByteData;
     final Uint8List pngBytes = byteData.buffer.asUint8List();
-
+    
     return image.decodeImage(pngBytes);
   }
 
   Future<void> updateColor() async {
+    
     // image.Image.fromBytes(width, height, bytes)
     // image.
     curColor = fullImage.getPixel(
