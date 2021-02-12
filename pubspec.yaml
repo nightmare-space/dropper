@@ -15,7 +15,7 @@ dependencies:
   file_manager:
     path: ../file_manager
   # 用与图片取色器
-  image: ^2.1.19
+  image: 3.0.0-nullsafety.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
