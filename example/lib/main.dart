@@ -8,10 +8,7 @@ import 'package:permission_handler/permission_handler.dart';
 Future<bool> request() async {
   var status = await Permission.storage.status;
   print(status);
-  if (status.isUndetermined) {
-    await Permission.storage.request();
-    // We didn't ask for permission yet.
-  } else if (status.isPermanentlyDenied) {
+  if (status.isPermanentlyDenied) {
     await Permission.storage.request();
     // We didn't ask for permission yet.
   }
