@@ -1,7 +1,7 @@
 name: dropper
 description: A new Flutter project.
 
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 version: 1.0.0+1
 
@@ -14,8 +14,8 @@ dependencies:
 
   global_repository:
     git: https://github.com/nightmare-space/global_repository
-  file_picker: ^3.0.1
-  permission_handler: ^8.0.0+1
+  file_picker:
+    ^3.0.1
     # 用与图片取色器
   image: 3.0.0-nullsafety.0
 
@@ -28,5 +28,4 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
-
   uses-material-design: true

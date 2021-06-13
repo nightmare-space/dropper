@@ -3,20 +3,8 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:global_repository/global_repository.dart';
-import 'package:permission_handler/permission_handler.dart';
 
 import 'choose_img.dart';
-
-Future<bool> request() async {
-  var status = await Permission.storage.status;
-  print(status);
-  if (status.isPermanentlyDenied) {
-    await Permission.storage.request();
-    // We didn't ask for permission yet.
-  }
-  status = await Permission.storage.status;
-  return status.isGranted;
-}
 
 void main() {
   runApp(MyApp());
@@ -27,7 +15,7 @@ void main() {
     systemNavigationBarDividerColor: Colors.transparent,
   ));
   if (Platform.isAndroid) {
-    request();
+    PermissionUtil.requestStorage();
   }
 }
 
